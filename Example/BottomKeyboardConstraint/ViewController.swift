@@ -1,21 +1,21 @@
 //
-//  ViewController.swift
-//  BottomKeyboardConstraint
+//  Copyright © 2019 Stefan Brighiu. All rights reserved.
 //
-//  Created by Stefan Brighiu on 05/06/2019.
-//  Copyright (c) 2019 Stefan Brighiu. All rights reserved.
-//
-
 import UIKit
+import BottomKeyboardConstraint
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, KeyboardDelegate {
+    
+    @IBOutlet weak var titleLabel: UILabel?
+    
+    @IBOutlet weak var bottomKeyboardConstraint: NSLayoutConstraint?
+    
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        bottomKeyboardConstraint?.registerAsBottomKeyboardConstraint(in: self)
     }
 
     @IBAction func dismiss() {
@@ -31,6 +31,16 @@ class ViewController: UIViewController {
             segue.destination.hidesBottomBarWhenPushed = true
         }
     }
+    
+    func keyboardUpdated(withState state: KeyboardState) {
+        print(state)
+    }
+    
+    func keyboardShouldDismissAtTap() -> Bool {
+        if titleLabel?.text == "No Tap To Dismiss" {
+            return false
+        }
+        return true
+    }
 
 }
-

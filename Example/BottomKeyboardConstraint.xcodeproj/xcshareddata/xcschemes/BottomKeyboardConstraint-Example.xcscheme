@@ -46,7 +46,7 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94126C05F79D7D7A8D3B222CAEC5B213"
+            BlueprintIdentifier = "B0065190B17C52F2B46F68EB479D5EC4"
             BuildableName = "BottomKeyboardConstraint.framework"
             BlueprintName = "BottomKeyboardConstraint"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">

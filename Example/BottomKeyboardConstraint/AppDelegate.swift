@@ -1,9 +1,5 @@
 //
-//  AppDelegate.swift
-//  BottomKeyboardConstraint
-//
-//  Created by Stefan Brighiu on 05/06/2019.
-//  Copyright (c) 2019 Stefan Brighiu. All rights reserved.
+//  Copyright © 2019 Stefan Brighiu. All rights reserved.
 //
 
 import UIKit
