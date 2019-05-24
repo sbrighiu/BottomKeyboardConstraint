@@ -37,14 +37,11 @@ extension NSLayoutConstraint {
         model.defaultBottomMargin = self.constant
         
         // Update model information
-        let old = model.takesSafeAreaIntoAccount
         if vc.view.bottomAnchor == self.firstAnchor ||
             vc.view.bottomAnchor == self.secondAnchor {
             model.takesSafeAreaIntoAccount = false
         }
-        print("takesSafeAreaIntoAccount: \(self.model.takesSafeAreaIntoAccount) (old: \(old))")
-        
-        //
+
         if self.firstItem is UIScrollView ||
             self.secondItem is UIScrollView {
             model.referenceViewIsAScrollView = true
