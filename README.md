@@ -21,6 +21,10 @@ pod 'BottomKeyboardConstraint'
 ## Description
 BottomKeyboardConstraint is a library that makes it easy and transparent to deal with keyboard events, animations and dismissal.
 
+It is always recommended pairing the view controllers using a keyboard with an UIScrollView. This library uses the bottom keyboard set by you to maintain the distance set from the bottom to the UI element selected.
+
+Just set the bottomKeyboardConstraint to connect the bottom layout guide / top superview bottom and the bottom most element defined, and the library will do the rest.
+
 The whole library is set up as an extension of NSLayoutConstraint and uses a simple `registerAsBottomKeyboardConstraint(in: <KeyboardDelegate object>)` to activate.
 
 The KeyboardDelegate is defined as:
