@@ -95,7 +95,7 @@
                                 <rect key="frame" x="306" y="52" width="53" height="30"/>
                                 <state key="normal" title="Present"/>
                                 <connections>
-                                    <segue destination="6bd-AL-tc1" kind="presentation" id="6FZ-F1-P8O"/>
+                                    <segue destination="e3n-DI-PrK" kind="presentation" id="MXP-Qc-kiQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Write something here..." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bF8-lg-GKY">
@@ -380,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilo-If-uFc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="919.21182266009851"/>
+            <point key="canvasLocation" x="2966" y="920"/>
         </scene>
         <!--UIViewController-->
         <scene sceneID="z6Y-Og-ffR">
@@ -454,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5s-XN-jt3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3902" y="919"/>
+            <point key="canvasLocation" x="4855" y="919"/>
         </scene>
         <!--UIViewController-->
         <scene sceneID="2Vv-7l-Mbt">
@@ -575,7 +575,115 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elD-o5-z6R" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2965.5999999999999" y="918.4729064039409"/>
+            <point key="canvasLocation" x="3919" y="919"/>
+        </scene>
+        <!--UIViewController-->
+        <scene sceneID="dHV-tx-1Bx">
+            <objects>
+                <viewController id="e3n-DI-PrK" customClass="ViewController" customModule="BottomKeyboardConstraint_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k7o-3J-BW8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dmo-fa-gB8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="79c-Fx-UtL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-ER-5v9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NI-gI-g7e">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write something here too..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIz-cl-VQb">
+                                                <rect key="frame" x="16" y="720" width="343" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll down to see the UITextField" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxH-aY-iKp">
+                                                <rect key="frame" x="16" y="256" width="343" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-OU-ggH">
+                                                <rect key="frame" x="16" y="56" width="54" height="30"/>
+                                                <state key="normal" title="Dismiss"/>
+                                                <connections>
+                                                    <action selector="dismiss" destination="e3n-DI-PrK" eventType="touchUpInside" id="9Bh-z8-mUB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcY-kI-Dzh">
+                                                <rect key="frame" x="306" y="56" width="53" height="30"/>
+                                                <state key="normal" title="Present"/>
+                                                <connections>
+                                                    <segue destination="6bd-AL-tc1" kind="presentation" id="XNg-VJ-J5R"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="ScrollView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYS-Iw-tdn">
+                                                <rect key="frame" x="147.66666666666666" y="60.666666666666657" width="80" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tck-oj-17u">
+                                                <rect key="frame" x="134" y="113.66666666666669" width="107" height="30"/>
+                                                <state key="normal" title="Close keyboard"/>
+                                                <connections>
+                                                    <action selector="closeKeyboard" destination="e3n-DI-PrK" eventType="touchUpInside" id="2tg-CW-BC5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="mIz-cl-VQb" firstAttribute="leading" secondItem="3NI-gI-g7e" secondAttribute="leading" constant="16" id="2TS-W1-KP7"/>
+                                            <constraint firstItem="SYS-Iw-tdn" firstAttribute="centerY" secondItem="ZcY-kI-Dzh" secondAttribute="centerY" id="8sD-4i-1tn"/>
+                                            <constraint firstItem="ZcY-kI-Dzh" firstAttribute="top" secondItem="3NI-gI-g7e" secondAttribute="top" constant="56" id="8wd-QL-d6D"/>
+                                            <constraint firstItem="SYS-Iw-tdn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pbq-OU-ggH" secondAttribute="trailing" constant="16" id="DIP-Yi-dpA"/>
+                                            <constraint firstAttribute="bottom" secondItem="mIz-cl-VQb" secondAttribute="bottom" id="RrN-Ov-3vO"/>
+                                            <constraint firstItem="SYS-Iw-tdn" firstAttribute="centerX" secondItem="3NI-gI-g7e" secondAttribute="centerX" id="YTI-MI-KRa"/>
+                                            <constraint firstItem="sxH-aY-iKp" firstAttribute="top" secondItem="3NI-gI-g7e" secondAttribute="top" constant="256" id="b17-sf-tay"/>
+                                            <constraint firstAttribute="trailing" secondItem="mIz-cl-VQb" secondAttribute="trailing" constant="16" id="bLp-PO-Xk9"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZcY-kI-Dzh" secondAttribute="trailing" constant="16" id="cBY-5y-xOv"/>
+                                            <constraint firstAttribute="trailing" secondItem="sxH-aY-iKp" secondAttribute="trailing" constant="16" id="h8C-WQ-mbN"/>
+                                            <constraint firstItem="tck-oj-17u" firstAttribute="centerX" secondItem="3NI-gI-g7e" secondAttribute="centerX" id="hk8-Xr-n4m"/>
+                                            <constraint firstItem="pbq-OU-ggH" firstAttribute="leading" secondItem="3NI-gI-g7e" secondAttribute="leading" constant="16" id="jG1-qw-nyN"/>
+                                            <constraint firstItem="pbq-OU-ggH" firstAttribute="top" secondItem="3NI-gI-g7e" secondAttribute="top" constant="56" id="lCP-5j-HTc"/>
+                                            <constraint firstItem="tck-oj-17u" firstAttribute="top" secondItem="SYS-Iw-tdn" secondAttribute="bottom" constant="32" id="lz9-cA-Zbv"/>
+                                            <constraint firstAttribute="height" constant="750" id="oRZ-pm-K5G"/>
+                                            <constraint firstItem="ZcY-kI-Dzh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SYS-Iw-tdn" secondAttribute="trailing" constant="16" id="x0t-vn-vBk"/>
+                                            <constraint firstItem="sxH-aY-iKp" firstAttribute="leading" secondItem="3NI-gI-g7e" secondAttribute="leading" constant="16" id="zne-O6-ZAs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3NI-gI-g7e" firstAttribute="width" secondItem="mBs-ER-5v9" secondAttribute="width" id="04R-T2-RD8"/>
+                                    <constraint firstItem="3NI-gI-g7e" firstAttribute="top" secondItem="mBs-ER-5v9" secondAttribute="top" id="9At-NY-IXf"/>
+                                    <constraint firstAttribute="bottom" secondItem="3NI-gI-g7e" secondAttribute="bottom" id="KRw-iu-8QQ"/>
+                                    <constraint firstItem="3NI-gI-g7e" firstAttribute="leading" secondItem="mBs-ER-5v9" secondAttribute="leading" id="TK9-7e-kbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="3NI-gI-g7e" secondAttribute="trailing" id="eZN-z4-Wpi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mBs-ER-5v9" firstAttribute="top" secondItem="79c-Fx-UtL" secondAttribute="top" id="1GA-bx-0zU"/>
+                            <constraint firstAttribute="bottom" secondItem="mBs-ER-5v9" secondAttribute="bottom" id="Ajo-xT-7Kk"/>
+                            <constraint firstItem="mBs-ER-5v9" firstAttribute="leading" secondItem="79c-Fx-UtL" secondAttribute="leading" id="ijA-D8-Jqk"/>
+                            <constraint firstAttribute="trailing" secondItem="mBs-ER-5v9" secondAttribute="trailing" id="kl4-vE-lmw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UIViewController" id="llH-hD-pm3"/>
+                    <connections>
+                        <outlet property="bottomKeyboardConstraint" destination="Ajo-xT-7Kk" id="SdA-vw-9uj"/>
+                        <outlet property="textField" destination="mIz-cl-VQb" id="fsO-Xk-VTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blE-15-9Ac" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="919.21182266009851"/>
         </scene>
     </scenes>
 </document>
