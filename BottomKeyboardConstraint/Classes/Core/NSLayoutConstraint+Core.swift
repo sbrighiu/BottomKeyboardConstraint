@@ -71,17 +71,23 @@ extension NSLayoutConstraint {
             let frame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         let newHeight = frame.size.height
         
-        let bottomMargin = model.vcDelegate?.tabBarController?.tabBar.frame.size.height ?? UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
-        var finalHeight: CGFloat
-        if deviceHasNotch,
-            !model.referenceViewIsAScrollView {
-            finalHeight = newHeight + model.defaultBottomMargin - bottomMargin
-            
-        } else if model.referenceViewIsAScrollView, !model.takesSafeAreaIntoAccount {
-                finalHeight = newHeight + model.defaultBottomMargin
-            
+        let bottomMargin = model.vcDelegate?.navigationController?.tabBarController?.tabBar.frame.size.height
+            ?? model.vcDelegate?.tabBarController?.tabBar.frame.size.height
+            ?? UIApplication.shared.keyWindow?.safeAreaInsets.bottom
+            ?? 0
+        var finalHeight: CGFloat = newHeight + model.defaultBottomMargin
+        if deviceHasNotch {
+            if model.referenceViewIsAScrollView {
+                if model.takesSafeAreaIntoAccount {
+                    finalHeight = newHeight + model.defaultBottomMargin - bottomMargin
+                }
+            } else {
+                finalHeight = newHeight + model.defaultBottomMargin - bottomMargin
+            }
         } else {
-            finalHeight = newHeight + model.defaultBottomMargin
+            if bottomMargin != 0 {
+                finalHeight = newHeight + model.defaultBottomMargin - bottomMargin
+            }
         }
         
         model.vcDelegate?.keyboardUpdated(withState: .willUpdateHeight(from: self.constant, to: newHeight))
